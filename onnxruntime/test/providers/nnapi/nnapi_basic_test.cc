@@ -19,11 +19,11 @@
 #include "test/util/include/test_utils.h"
 #include "core/framework/data_types_internal.h"
 
-#if !defined(ORT_MINIMAL_BUILD)
+// #if !defined(ORT_MINIMAL_BUILD)
 // if this is a full build we need the provider test utils
 #include "test/providers/provider_test_utils.h"
 #include "test/optimizer/qdq_test_utils.h"
-#endif
+// #endif
 
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
