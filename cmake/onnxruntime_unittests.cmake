@@ -395,10 +395,10 @@ if (onnxruntime_USE_DNNL)
 endif()
 
 if (onnxruntime_USE_NNAPI_BUILTIN)
-  file(GLOB_RECURSE onnxruntime_test_providers_nnapi_src CONFIGURE_DEPENDS
-    "${TEST_SRC_DIR}/providers/nnapi/*"
-    )
-  list(APPEND onnxruntime_test_providers_src ${onnxruntime_test_providers_nnapi_src})
+  # file(GLOB_RECURSE onnxruntime_test_providers_nnapi_src CONFIGURE_DEPENDS
+  #   "${TEST_SRC_DIR}/providers/nnapi/*"
+  #   )
+  # list(APPEND onnxruntime_test_providers_src ${onnxruntime_test_providers_nnapi_src})
 endif()
 
 if (onnxruntime_USE_RKNPU)
@@ -604,7 +604,7 @@ if(onnxruntime_USE_MIGRAPHX)
 endif()
 
 if(onnxruntime_USE_NNAPI_BUILTIN)
-  list(APPEND onnxruntime_test_framework_src_patterns  ${TEST_SRC_DIR}/providers/nnapi/*)
+  # list(APPEND onnxruntime_test_framework_src_patterns  ${TEST_SRC_DIR}/providers/nnapi/*)
   list(APPEND onnxruntime_test_framework_libs onnxruntime_providers_nnapi)
   list(APPEND onnxruntime_test_providers_dependencies onnxruntime_providers_nnapi)
   list(APPEND onnxruntime_test_providers_libs onnxruntime_providers_nnapi)

@@ -70,6 +70,8 @@ RUN ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install \
   "platforms;android-32" \
   "ndk;${NDK_VERSION}"
 
+ARG CACHE_DATE=2023-08-30-2130
+
 # get ORT repo
 ARG ONNXRUNTIME_REPO=https://github.com/microsoft/onnxruntime.git
 ARG ONNXRUNTIME_BRANCH_OR_TAG=main
